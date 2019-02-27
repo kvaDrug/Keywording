@@ -45,7 +45,7 @@ class Output {
   private func printStoreStat(_ stat: StoreStat) {
     print(stat.countryCode)
     for (keyword, result) in stat.sortedResultsByKeyword {
-      print("\(keyword):", result)
+      print("\(keyword)\t\(result)" )
     }
   }
 }
