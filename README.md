@@ -1,6 +1,10 @@
-# Keywording
+# Keywording v1.0.0
 
 A MacOS command line tool for marketing. Based on [iTunes Search API](https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/) Keywording allows to estimate the keywords popularity in App Store, by region. A user can specify the keywords and country codes. The tool returns the number of the search results corresponding to each keyword and country. This eventually allows to estimate the keyword **competition** which is an essential part of the keywords optimization. [This post](https://kelindev.blogspot.com/2018/08/appstore-keywords.html) describes the details entire procedure of sorting and choosing keywords for App Store using free tools including Keywording.
+
+## Installation
+
+The ready-to-use build could be fuound in [Build/Release](https://github.com/kvaDrug/Keywording/tree/master/Build/Release). Alternatively, the project could be built with Xcode.
 
 ## Usage
 
