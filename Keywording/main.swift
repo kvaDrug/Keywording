@@ -35,7 +35,10 @@ case .inline(keywords: let keywords, countryCodes: let countryCodes):
   
 case .file(url: let fileURL, countryCodes: let countryCodes):
   let fileString = (try? String(contentsOf: fileURL)) ?? ""
-  let keywords = fileString.components(separatedBy: CharacterSet.whitespacesAndNewlines)
+  let delimiters = CharacterSet.newlines.union(.init(charactersIn: ","))
+  let keywords = fileString.components(separatedBy: delimiters).map {
+    $0.trimmingCharacters(in: .whitespaces)
+  }
   if keywords.isEmpty {
     output.printError("keywords not found")
     exit(EXIT_FAILURE)

@@ -14,7 +14,7 @@ class Output {
     print("\(executableName) v\(Constants.version)")
     print("Usage:")
     print("\t\(executableName) \"<comma separated keywords>\" <country code>...")
-    print("\t\(executableName) <file> <country code>...")
+    print("\t\(executableName) -f <file> <country code>...")
     print("\t\(executableName) \(Constants.countryListArgument)")
   }
   

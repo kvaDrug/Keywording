@@ -23,14 +23,14 @@ enum Input {
       self = countryList
       return
     }
-
-    if let inline = I.parseInline(arguments: arguments) {
-      self = inline
-      return
-    }
     
     if let file = I.parseFile(arguments: arguments) {
       self = file
+      return
+    }
+
+    if let inline = I.parseInline(arguments: arguments) {
+      self = inline
       return
     }
     
@@ -58,9 +58,10 @@ private extension Input {
   }
   
   static func parseFile(arguments: [String]) -> Input? {
-    guard arguments.count >= 2 else { return nil }
-    let fileURL = URL(fileURLWithPath: arguments[0])
-    let countryCodes = Array(arguments.dropFirst())
+    guard arguments.count >= 3 else { return nil }
+    guard arguments[0] == "-f" else { return nil }
+    let fileURL = URL(fileURLWithPath: arguments[1])
+    let countryCodes = Array(arguments.dropFirst(2))
     return .file(url: fileURL, countryCodes: countryCodes)
   }
 }

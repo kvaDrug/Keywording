@@ -68,6 +68,14 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "drum,spinner,flipper"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "-f"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "test.txt"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
@@ -76,6 +84,10 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "GB"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "NZ"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
