@@ -17,14 +17,14 @@ Example:
 ```
 $ ./keywording "figure,plot,graph" GB US
 GB
-figure: 161
-graph: 190
-plot: 191
+figure	161
+graph	190
+plot	191
 
 US
-figure: 174
-graph: 191
-plot: 196
+figure	174
+graph	191
+plot	196
 ```
 
 Also, you can pass a file containing comma- or newline-separated keywords:
